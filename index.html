@@ -3,15 +3,15 @@
 
 <head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGHV089TQ6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGHV089TQ6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-MGHV089TQ6');
-</script>
-  
+    gtag('config', 'G-MGHV089TQ6');
+  </script>
+
   <title>brightertiger</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -29,12 +29,18 @@
 
     body {
       margin: 0;
-      /* background-color: #f7f4ed; */
+      color: #333;
+      line-height: 1.6;
     }
 
     a {
-      color: #0000EE;
-      font-weight: 100;
+      color: #000;
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #666;
     }
 
     .body {
@@ -42,10 +48,13 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
     }
 
     .holdon {
-      margin-top: 50px;
+      margin-top: 30px;
       width: 100%;
     }
 
@@ -55,44 +64,88 @@
 
     .intro {
       font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .intro p {
+      margin-bottom: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95em;
+    }
+
+    th,
+    td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      font-weight: 500;
+      color: #666;
+    }
+
+    tr:hover td {
+      background-color: #fafafa;
+    }
+
+    .social {
+      text-align: right;
+      margin-top: 2rem;
+    }
+
+    .social a {
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+    }
+
+    .social a:hover {
+      opacity: 1;
+    }
+
+    .icon {
+      width: 24px;
+      margin-left: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .social a:hover .icon {
+      transform: scale(1.1);
     }
 
     @media only screen and (max-width: 1000px) {
       .intro {
-        margin: 0 30%;
+        margin: 0 2rem;
       }
     }
 
     @media only screen and (max-width: 800px) {
       .intro {
-        margin: 0 25%;
+        margin: 0 1.5rem;
       }
     }
 
     @media only screen and (max-width: 600px) {
       .intro {
-        margin: 0 32px;
+        margin: 0 1rem;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 0.75rem;
       }
     }
-
-    .social {
-      text-align: right;
-    }
-
-    .social a {
-      text-decoration: none;
-    }
-
-    .icon {
-      width: 25px;
-      margin-left: 20px;
-    }
-   .td {
-  text-align: center;
-   } 
-  .th {
-  text-align: center;
-   } 
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53624533-8"></script>
   <script src="/analytics.js"></script>
@@ -103,36 +156,38 @@
     <div class="holdon"></div>
 
     <div class="intro">
-      <div style="text-align: right; margin-bottom: 10px;">
-        <img style="text-align:center;" src="assets/profile.png" width="600">
+      <div style="text-align: right; margin-bottom: 20px;">
+        <img style="text-align:center;" src="assets/profile.png" width="600" alt="Profile image">
       </div>
 
       <p>Hello, I'm brightertiger ^..^ 👋!</p>
-      <p> I am a data scientist and part-time kaggler.</p>
+      <p>I am a data scientist and part-time kaggler.</p>
       <p>A list of things I'm working on:</p>
-      <!-- <ul>
-        <li><a href="https://brightertiger.github.io/notes/" style="text-decoration: none;">Notes on Data Science and Machine Learning</a></li>
-      </ul> -->
-      <table style="width:100%">
+      <table>
         <tr>
-          <th style="text-align: center; width:30%">Project</th>
-          <th style="text-align: center; width:60%">Description</th> 
-          <th style="text-align: center; width:10%">Link</th> 
+          <th>Project</th>
+          <th>Description</th>
+          <th></th>
         </tr>
         <tr>
-          <td style="text-align: center">Notes</td>
-          <td style="text-align: center">Notes on Machine Learning, Data Science</td> 
-          <td style="text-align: center"><a href="https://brightertiger.github.io/notes/" style="text-decoration: none;">🔗</a></td> 
+          <td>ML Notes</td>
+          <td>Notes on Machine Learning, Data Science</td>
+          <td><a href="https://brightertiger.github.io/notes/" style="text-decoration: none;">🔗</a></td>
         </tr>
         <tr>
-          <td style="text-align: center">Entity Extraction</td>
-          <td style="text-align: center">Named Entity Recognition using BERT</td> 
-          <td style="text-align: center"><a href="https://github.com/brightertiger/entity-extraction" style="text-decoration: none;">🔗</a></td>
+          <td>Entity Extraction</td>
+          <td>Named Entity Recognition using BERT</td>
+          <td><a href="https://brightertiger.github.io/entity-extraction/" style="text-decoration: none;">🔗</a></td>
         </tr>
         <tr>
-          <td style="text-align: center">Lane Detection</td>
-          <td style="text-align: center">Lane Detection using UNET</td> 
-          <td style="text-align: center"><a href="https://github.com/brightertiger/lane-detection" style="text-decoration: none;">🔗</a></td>
+          <td>Lane Detection</td>
+          <td>Lane Detection using UNET</td>
+          <td><a href="https://brightertiger.github.io/lane-detection/" style="text-decoration: none;">🔗</a></td>
+        </tr>
+        <tr>
+          <td>LLM Agents</td>
+          <td>LLM Agents using Google ADK</td>
+          <td><a href="https://brightertiger.github.io/agents-demo/" style="text-decoration: none;">🔗</a></td>
         </tr>
       </table>
       <br><br>
