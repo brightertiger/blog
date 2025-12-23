@@ -38,20 +38,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/profile.png">
   
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://fonts.gstatic.com/s/notosanstc/v4/-nF7OG829Oofr2wohFbTp9i1OCEJ.otf" as="font" type="font/otf" crossorigin>
-  <link rel="preload" href="/assets/profile.png" as="image">
-  
-  <!-- DNS prefetch for external domains -->
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link rel="dns-prefetch" href="//www.googletagmanager.com">
-  <link rel="dns-prefetch" href="//www.google-analytics.com">
-  
-  <!-- Security Headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -60,7 +50,7 @@
     "@type": "Person",
     "name": "Ujjwal Singh Rao",
     "alternateName": "BrighterTiger",
-    "description": "Data scientist and part-time kaggler specializing in machine learning, deep learning, and AI. Known online as BrighterTiger across GitHub, Kaggle, Medium, and other platforms.",
+    "description": "Data scientist and part-time kaggler specializing in machine learning, deep learning, and AI.",
     "url": "https://brightertiger.xyz",
     "image": "https://brightertiger.xyz/assets/profile.png",
     "sameAs": [
@@ -69,24 +59,7 @@
       "https://www.kaggle.com/brightertiger",
       "https://medium.com/@brightertiger"
     ],
-    "jobTitle": "Data Scientist",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Independent"
-    },
-    "knowsAbout": [
-      "Machine Learning",
-      "Deep Learning", 
-      "Data Science",
-      "Artificial Intelligence",
-      "Named Entity Recognition",
-      "Computer Vision",
-      "Natural Language Processing",
-      "Kaggle Competitions",
-      "BERT",
-      "UNET",
-      "LLM Agents"
-    ]
+    "jobTitle": "Data Scientist"
   }
   </script>
 
@@ -97,8 +70,21 @@
     gtag('js', new Date());
     gtag('config', 'G-MGHV089TQ6');
   </script>
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    :root {
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #666666;
+      --text-muted: #999999;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --border: #e5e5e5;
+      --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+      --radius: 12px;
+    }
 
     * {
       margin: 0;
@@ -106,473 +92,548 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
-      color: #2d3748;
-      background-color: #ffffff;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 1.5rem;
     }
 
-    .header {
+    /* Hero */
+    .hero {
+      padding: 6rem 0 4rem;
       text-align: center;
-      padding: 4rem 0 2rem;
-      border-bottom: 1px solid #e2e8f0;
-      margin-bottom: 3rem;
     }
 
     .profile-img {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      margin: 0 auto 1.5rem;
-      display: block;
       object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 3px solid var(--bg-card);
+      box-shadow: var(--shadow);
     }
 
-    .header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #1a202c;
-    }
-
-    .header .subtitle {
-      font-size: 1.2rem;
-      color: #718096;
-      margin-bottom: 1rem;
-    }
-
-    .header .description {
-      font-size: 1rem;
-      color: #4a5568;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: #4a5568;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-    }
-
-    .nav a:hover {
-      color: #2d3748;
-      background-color: #f7fafc;
-    }
-
-    .section {
-      margin-bottom: 4rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 2px solid #e2e8f0;
-    }
-
-    .section-icon {
-      width: 32px;
-      height: 32px;
-      margin-right: 1rem;
-    }
-
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #1a202c;
-    }
-
-    .section-content {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 1.5rem;
-      transition: all 0.2s ease;
-    }
-
-    .card:hover {
-      border-color: #cbd5e0;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #1a202c;
-    }
-
-    .card-description {
-      color: #4a5568;
-      margin-bottom: 1rem;
-    }
-
-    .card-meta {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.9rem;
-      color: #718096;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 1.5rem;
-      background: #f7fafc;
-      border-radius: 8px;
-    }
-
-    .stat-number {
+    .hero h1 {
       font-size: 2rem;
-      font-weight: 600;
-      color: #1a202c;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.02em;
     }
 
-    .stat-label {
-      color: #718096;
-      font-size: 0.9rem;
-    }
-
-    .achievement {
-      display: flex;
-      align-items: center;
-      padding: 1rem;
-      background: #f7fafc;
-      border-radius: 6px;
+    .handle {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.95rem;
+      color: var(--text-muted);
       margin-bottom: 1rem;
     }
 
-    .achievement-icon {
-      width: 24px;
-      height: 24px;
-      margin-right: 1rem;
-    }
-
-    .achievement-text {
-      flex: 1;
-    }
-
-    .achievement-title {
-      font-weight: 500;
-      color: #1a202c;
-    }
-
-    .achievement-desc {
-      font-size: 0.9rem;
-      color: #718096;
+    .bio {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin: 0 auto 2rem;
     }
 
     .social-links {
       display: flex;
       justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      transition: all 0.15s ease;
+    }
+
+    .social-link:hover {
+      color: var(--text);
+      border-color: var(--text-muted);
+    }
+
+    .social-link img {
+      width: 16px;
+      height: 16px;
+      opacity: 0.7;
+    }
+
+    /* Section */
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: left;
+    }
+
+    .stat-value {
+      font-family: 'DM Mono', monospace;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Project Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.15s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: transparent;
+    }
+
+    .project-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .project-stars {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .project-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--bg);
+      color: var(--text-muted);
+    }
+
+    /* Kaggle */
+    .kaggle-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .kaggle-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .kaggle-rank {
+      font-family: 'DM Mono', monospace;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent);
+      min-width: 48px;
+    }
+
+    .kaggle-info h3 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+
+    .kaggle-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .kaggle-medal {
+      margin-left: auto;
+      font-size: 1.25rem;
+    }
+
+    /* Articles */
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .article-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid var(--border);
+      transition: all 0.15s ease;
+    }
+
+    .article-item:last-child {
+      border-bottom: none;
+    }
+
+    .article-item:hover {
+      padding-left: 0.5rem;
+    }
+
+    .article-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      min-width: 60px;
+      padding-top: 0.15rem;
+    }
+
+    .article-content h3 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      color: var(--text);
+    }
+
+    .article-content p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 3rem 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
       margin-top: 2rem;
     }
 
-    .social-links a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    .footer p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer a {
+      color: var(--text-secondary);
       text-decoration: none;
-      color: #4a5568;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: all 0.2s ease;
     }
 
-    .social-links a:hover {
-      background-color: #f7fafc;
-      color: #2d3748;
+    .footer a:hover {
+      color: var(--text);
     }
 
-    .social-icon {
-      width: 20px;
-      height: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 1rem;
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero {
+        padding: 4rem 0 3rem;
       }
 
-      .header h1 {
-        font-size: 2rem;
+      .hero h1 {
+        font-size: 1.75rem;
       }
 
-      .nav {
-        flex-direction: column;
-        gap: 0.5rem;
+      .bio {
+        font-size: 1rem;
       }
 
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .project-grid {
+        grid-template-columns: 1fr;
       }
 
-      .section-title {
-        font-size: 1.5rem;
+      .stats {
+        gap: 1.5rem;
+      }
+
+      .kaggle-item {
+        flex-wrap: wrap;
+      }
+
+      .kaggle-medal {
+        margin-left: 0;
       }
     }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53624533-8"></script>
-  <script src="/analytics.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <!-- Header Section -->
-    <header class="header">
-      <img src="assets/profile.png" alt="Ujjwal Singh Rao" class="profile-img" loading="eager">
+    <!-- Hero -->
+    <header class="hero">
+      <img src="assets/profile.png" alt="Ujjwal Singh Rao" class="profile-img">
       <h1>Ujjwal Singh Rao</h1>
-      <div class="subtitle">@brightertiger</div>
-      <p class="description">Data Scientist & Machine Learning Engineer passionate about AI, deep learning, and open source contributions</p>
+      <p class="handle">@brightertiger</p>
+      <p class="bio">Data Scientist & Kaggle Master building intelligent systems with ML, Deep Learning, and LLM Agents</p>
+      
+      <div class="social-links">
+        <a href="https://github.com/brightertiger" target="_blank" class="social-link">
+          <img src="assets/github.png" alt="">GitHub
+        </a>
+        <a href="https://twitter.com/0xbrightertiger" target="_blank" class="social-link">
+          <img src="assets/twitter.png" alt="">Twitter
+        </a>
+        <a href="https://www.kaggle.com/brightertiger" target="_blank" class="social-link">
+          Kaggle
+        </a>
+        <a href="https://brightertiger.medium.com" target="_blank" class="social-link">
+          Medium
+        </a>
+      </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="#github">GitHub</a>
-      <a href="#kaggle">Kaggle</a>
-      <a href="#medium">Medium</a>
-    </nav>
-
-    <!-- GitHub Section -->
-    <section id="github" class="section">
-      <div class="section-header">
-        <svg class="section-icon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-        </svg>
-        <h2 class="section-title">GitHub</h2>
-      </div>
+    <!-- GitHub -->
+    <section class="section">
+      <h2 class="section-title">Open Source</h2>
       
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">11</div>
-          <div class="stat-label">Repositories</div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">11</div>
+          <div class="stat-label">Repos</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">463</div>
-          <div class="stat-label">Stars</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">11</div>
+        <div class="stat">
+          <div class="stat-value">17</div>
           <div class="stat-label">Followers</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">78</div>
+        <div class="stat">
+          <div class="stat-value">79</div>
           <div class="stat-label">Following</div>
         </div>
       </div>
 
-      <div class="section-content">
-        <div class="card">
-          <h3 class="card-title">pygarble</h3>
-          <p class="card-description">Python Package to detect garbled, gibberish text for English language processing</p>
-          <div class="card-meta">
-            <span>Python</span>
-            <span>Text Processing</span>
+      <div class="project-grid">
+        <a href="https://github.com/brightertiger/pygarble" target="_blank" class="project-card">
+          <div class="project-name">
+            pygarble
+            <span class="project-stars">★ 15</span>
           </div>
+          <p class="project-desc">Python package to detect garbled, gibberish text for EN</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">NLP</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/brightertiger/google-adk-demo" target="_blank" class="project-card">
+          <div class="project-name">
+            google-adk-demo
+            <span class="project-stars">★ 15</span>
+          </div>
+          <p class="project-desc">LLM Agents Demo using Google ADK</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LLM Agents</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/brightertiger/kaggle" target="_blank" class="project-card">
+          <div class="project-name">
+            kaggle
+            <span class="project-stars">★ 15</span>
+          </div>
+          <p class="project-desc">Kaggle Competitions + Playground solutions</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">ML</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/brightertiger/lane-detection" target="_blank" class="project-card">
+          <div class="project-name">
+            lane-detection
+            <span class="project-stars">★ 1</span>
+          </div>
+          <p class="project-desc">Lane Detection using U-Net architecture</p>
+          <div class="project-tags">
+            <span class="tag">Jupyter</span>
+            <span class="tag">CV</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/brightertiger/agentic-college-counselling" target="_blank" class="project-card">
+          <div class="project-name">agentic-college-counselling</div>
+          <p class="project-desc">AI-powered College Counseling Agent</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Agents</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/brightertiger" target="_blank" class="project-card">
+          <div class="project-name">View all →</div>
+          <p class="project-desc">More projects on GitHub</p>
+          <div class="project-tags">
+            <span class="tag">6+ repos</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Kaggle -->
+    <section class="section">
+      <h2 class="section-title">Kaggle</h2>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Gold</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Silver</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">4</div>
+          <div class="stat-label">Bronze</div>
+        </div>
+      </div>
+
+      <div class="kaggle-list">
+        <div class="kaggle-item">
+          <div class="kaggle-rank">#3</div>
+          <div class="kaggle-info">
+            <h3>Jigsaw Multilingual Toxic Comment Classification</h3>
+            <div class="kaggle-meta">1,621 teams · NLP</div>
+          </div>
+          <div class="kaggle-medal">🥇</div>
         </div>
 
-        <div class="card">
-          <h3 class="card-title">google-adk-demo</h3>
-          <p class="card-description">LLM Agents Demo using Google ADK for building intelligent applications</p>
-          <div class="card-meta">
-            <span>Python</span>
-            <span>LLM Agents</span>
-            <span>9 stars</span>
+        <div class="kaggle-item">
+          <div class="kaggle-rank">#6</div>
+          <div class="kaggle-info">
+            <h3>SIIM-ISIC Melanoma Detection</h3>
+            <div class="kaggle-meta">3,308 teams · Computer Vision</div>
           </div>
+          <div class="kaggle-medal">🥇</div>
         </div>
 
-        <div class="card">
-          <h3 class="card-title">lane-detection</h3>
-          <p class="card-description">Lane Detection using U-Net architecture for computer vision applications</p>
-          <div class="card-meta">
-            <span>Jupyter Notebook</span>
-            <span>Computer Vision</span>
-            <span>18 stars</span>
+        <div class="kaggle-item">
+          <div class="kaggle-rank">#16</div>
+          <div class="kaggle-info">
+            <h3>TalkingData AdTracking Fraud Detection</h3>
+            <div class="kaggle-meta">3,943 teams · Fraud Detection</div>
           </div>
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">entity-extraction</h3>
-          <p class="card-description">Named Entity Recognition (NER) using BERT for natural language processing</p>
-          <div class="card-meta">
-            <span>HTML</span>
-            <span>NLP</span>
-            <span>BERT</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">agentic-college-counselling</h3>
-          <p class="card-description">College Counseling Agent built with AI and machine learning</p>
-          <div class="card-meta">
-            <span>Python</span>
-            <span>AI Agents</span>
-          </div>
+          <div class="kaggle-medal">🥇</div>
         </div>
       </div>
     </section>
 
-    <!-- Kaggle Section -->
-    <section id="kaggle" class="section">
-      <div class="section-header">
-        <svg class="section-icon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c-.169 0-.315.063-.441.189-.126.126-.189.272-.189.441v6.42c0 .169.063.315.189.441.126.126.272.189.441.189h.84c.169 0 .315-.063.441-.189.126-.126.189-.272.189-.441V8.79c0-.169-.063-.315-.189-.441-.126-.126-.272-.189-.441-.189h-.84zm-3.36 0c-.169 0-.315.063-.441.189-.126.126-.189.272-.189.441v6.42c0 .169.063.315.189.441.126.126.272.189.441.189h.84c.169 0 .315-.063.441-.189.126-.126.189-.272.189-.441V8.79c0-.169-.063-.315-.189-.441-.126-.126-.272-.189-.441-.189h-.84zm-3.36 0c-.169 0-.315.063-.441.189-.126.126-.189.272-.189.441v6.42c0 .169.063.315.189.441.126.126.272.189.441.189h.84c.169 0 .315-.063.441-.189.126-.126.189-.272.189-.441V8.79c0-.169-.063-.315-.189-.441-.126-.126-.272-.189-.441-.189h-.84z"/>
-        </svg>
-        <h2 class="section-title">Kaggle</h2>
-      </div>
+    <!-- Articles -->
+    <section class="section">
+      <h2 class="section-title">Writing</h2>
 
-      <div class="achievement">
-        <div class="achievement-icon">🏆</div>
-        <div class="achievement-text">
-          <div class="achievement-title">Competitions Master</div>
-          <div class="achievement-desc">3 Gold, 12 Silver, and 4 Bronze medals across various machine learning competitions</div>
-        </div>
-      </div>
-
-      <div class="section-content">
-        <div class="card">
-          <h3 class="card-title">Jigsaw Multilingual Toxic Comment Classification</h3>
-          <p class="card-description">Ranked 3rd out of 1,621 participants in multilingual toxic comment classification challenge</p>
-          <div class="card-meta">
-            <span>🥇 Gold Medal</span>
-            <span>NLP</span>
-            <span>Rank #3</span>
+      <div class="article-list">
+        <a href="https://brightertiger.medium.com/multi-agent-llm-system-using-google-adk-4abd1ad6fbf0" target="_blank" class="article-item">
+          <div class="article-date">Apr 12</div>
+          <div class="article-content">
+            <h3>Multi-Agent LLM System using Google-ADK</h3>
+            <p>Building a multi-agent system with Google's Agent-Development-Kit and MCP for website crawling and geocoding</p>
           </div>
-        </div>
+        </a>
 
-        <div class="card">
-          <h3 class="card-title">SIIM-ISIC Melanoma Detection</h3>
-          <p class="card-description">Ranked 6th out of 3,308 participants in medical image analysis for melanoma detection</p>
-          <div class="card-meta">
-            <span>🥇 Gold Medal</span>
-            <span>Computer Vision</span>
-            <span>Rank #6</span>
+        <a href="https://brightertiger.medium.com/enhancing-named-entity-recognition-using-fine-tuned-roberta-0941450eaacb" target="_blank" class="article-item">
+          <div class="article-date">Mar 19</div>
+          <div class="article-content">
+            <h3>Enhancing Named-Entity Recognition Using Fine-Tuned RoBERTa</h3>
+            <p>How fine-tuning RoBERTa can enhance NER performance on custom datasets</p>
           </div>
-        </div>
+        </a>
 
-        <div class="card">
-          <h3 class="card-title">TalkingData AdTracking Fraud Detection</h3>
-          <p class="card-description">Ranked 16th out of 3,943 participants in mobile ad fraud detection challenge</p>
-          <div class="card-meta">
-            <span>🥇 Gold Medal</span>
-            <span>Fraud Detection</span>
-            <span>Rank #16</span>
+        <a href="https://brightertiger.medium.com" target="_blank" class="article-item">
+          <div class="article-date">Mar 18</div>
+          <div class="article-content">
+            <h3>Lane Detection in Computer Vision with U-Net</h3>
+            <p>Implementing lane detection using U-Net for autonomous driving applications</p>
           </div>
-        </div>
+        </a>
+
       </div>
     </section>
 
-    <!-- Medium Section -->
-    <section id="medium" class="section">
-      <div class="section-header">
-        <svg class="section-icon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75S24 8.83 24 12z"/>
-        </svg>
-        <h2 class="section-title">Medium</h2>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">95</div>
-          <div class="stat-label">Followers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">4</div>
-          <div class="stat-label">Articles</div>
-        </div>
-      </div>
-
-      <div class="section-content">
-        <div class="card">
-          <h3 class="card-title">Multi-Agent LLM System using Google-ADK</h3>
-          <p class="card-description">A comprehensive walkthrough of building a powerful multi-agent system with Google's Agent-Development-Kit (ADK) and Model-Context-Platform (MCP) for website crawling, address extraction, and geocoding applications.</p>
-          <div class="card-meta">
-            <span>April 12</span>
-            <span>LLM Agents</span>
-            <span>15 responses</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">Enhancing Named-Entity Recognition Using Fine-Tuned RoBERTa</h3>
-          <p class="card-description">Exploring how fine-tuning a pre-trained RoBERTa language model can significantly enhance NER performance on custom datasets, with practical implementation details and comprehensive results analysis.</p>
-          <div class="card-meta">
-            <span>March 19</span>
-            <span>NLP</span>
-            <span>14 responses</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">Lane Detection in Computer Vision: A Deep Learning Project with U-Net</h3>
-          <p class="card-description">Implementing advanced lane detection using U-Net architecture, covering data preprocessing, model training, and evaluation techniques for autonomous driving applications.</p>
-          <div class="card-meta">
-            <span>March 18</span>
-            <span>Computer Vision</span>
-            <span>13 responses</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 class="card-title">Explore Thy City</h3>
-          <p class="card-description">City Explorer: Discover Your City's Hidden Gems - A project focused on urban exploration and location-based recommendations.</p>
-          <div class="card-meta">
-            <span>May 3</span>
-            <span>Web Development</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Social Links -->
-    <div class="social-links">
-      <a href="https://github.com/brightertiger" target="_blank" rel="noopener noreferrer">
-        <img src="assets/github.png" alt="GitHub" class="social-icon">
-        GitHub
-      </a>
-      <a href="https://twitter.com/0xbrightertiger" target="_blank" rel="noopener noreferrer">
-        <img src="assets/twitter.png" alt="Twitter" class="social-icon">
-        Twitter
-      </a>
-      <a href="https://www.kaggle.com/brightertiger" target="_blank" rel="noopener noreferrer">
-        <span class="social-icon">🏆</span>
-        Kaggle
-      </a>
-      <a href="https://brightertiger.medium.com" target="_blank" rel="noopener noreferrer">
-        <span class="social-icon">📝</span>
-        Medium
-      </a>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        <a href="https://github.com/brightertiger">GitHub</a> · 
+        <a href="https://twitter.com/0xbrightertiger">Twitter</a> · 
+        <a href="https://www.kaggle.com/brightertiger">Kaggle</a> · 
+        <a href="https://brightertiger.medium.com">Medium</a> · 
+        <a href="https://www.linkedin.com/in/brightertiger">LinkedIn</a>
+      </p>
+    </footer>
   </div>
 </body>
 
