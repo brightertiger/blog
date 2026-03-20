@@ -277,15 +277,6 @@
       text-align: center;
     }
 
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1.75rem;
-      border: 4px solid var(--bg-card);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
 
     .hero h1 {
       font-size: 2.5rem;
@@ -338,7 +329,8 @@
       box-shadow: var(--shadow);
     }
 
-    .social-link img {
+    .social-link img,
+    .social-link svg {
       width: 18px;
       height: 18px;
       opacity: 0.8;
@@ -602,7 +594,6 @@
   <div class="container">
     <!-- Hero -->
     <header class="hero">
-      <img src="assets/profile.png" alt="Ujjwal Singh Rao" class="profile-img">
       <h1>Ujjwal Singh Rao</h1>
       <p class="handle">@brightertiger</p>
       <p class="bio">Data Scientist & Kaggle Master building intelligent systems with ML, Deep Learning, and LLM Agents</p>
@@ -612,13 +603,13 @@
           <img src="assets/github.png" alt="">GitHub
         </a>
         <a href="https://www.linkedin.com/in/brightertiger/" target="_blank" class="social-link">
-          LinkedIn
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
         </a>
         <a href="https://www.kaggle.com/brightertiger" target="_blank" class="social-link">
-          Kaggle
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v18"/><path d="M4 14l8-8"/><path d="M10 12l10 10"/></svg>Kaggle
         </a>
         <a href="https://brightertiger.substack.com" target="_blank" class="social-link">
-          Substack
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16"/><path d="M4 8h16"/><path d="M4 12l8 8 8-8"/></svg>Substack
         </a>
       </div>
     </header>
@@ -703,14 +694,6 @@
           </div>
         </a>
 
-        <a href="https://github.com/brightertiger/agentic-college-counselling" target="_blank" class="project-card">
-          <div class="project-name">agentic-college-counselling</div>
-          <p class="project-desc">AI-powered College Counseling Agent</p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Agents</span>
-          </div>
-        </a>
 
         <a href="https://github.com/brightertiger" target="_blank" class="project-card">
           <div class="project-name">View all →</div>
