@@ -12,7 +12,7 @@
   <meta name="keywords" content="Ujjwal Singh Rao, brightertiger, data scientist, machine learning engineer, Kaggle Master, deep learning, artificial intelligence, NLP, natural language processing, computer vision, LLM agents, BERT, RoBERTa, U-Net, Google ADK, Python developer, India, toxic comment classification, melanoma detection, fraud detection, entity extraction, lane detection, abverdict, pygarble">
   <meta name="author" content="Ujjwal Singh Rao">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#f1ece1">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Geo Meta Tags -->
   <meta name="geo.region" content="IN">
@@ -53,10 +53,7 @@
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Structured Data - Person Schema -->
   <script type="application/ld+json">
@@ -223,463 +220,32 @@
     gtag('config', 'G-MGHV089TQ6');
   </script>
 
-  <style>
-    :root {
-      --paper: #f1ece1;
-      --card: #f8f4eb;
-      --ink: #262019;
-      --ink-soft: #57503f;
-      --ink-mute: #6f6655;
-      --terracotta: #b0472c;
-      --terracotta-deep: #8e3a24;
-      --border: #ddd3c2;
-      --border-soft: #e6ddcd;
-      --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--sans);
-      line-height: 1.6;
-      color: var(--ink);
-      background: var(--paper);
-      border-top: 3px solid var(--terracotta);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    ::selection {
-      background: var(--terracotta);
-      color: var(--paper);
-    }
-
-    a:focus-visible {
-      outline: 2px solid var(--terracotta);
-      outline-offset: 3px;
-      border-radius: 2px;
-    }
-
-    .container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* ============ Hero ============ */
-    .hero {
-      padding: 5.5rem 0 4rem;
-    }
-
-    .wordmark {
-      font-size: clamp(2.4rem, 7vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.035em;
-      line-height: 1.05;
-      margin-bottom: 1.25rem;
-    }
-
-    .wordmark .dot {
-      color: var(--terracotta);
-    }
-
-    .hero .who {
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      color: var(--ink-mute);
-      margin-bottom: 1rem;
-    }
-
-    .hero .bio {
-      font-size: 1.15rem;
-      color: var(--ink-soft);
-      max-width: 34em;
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-
-    .hero .bio a {
-      color: var(--ink);
-      text-decoration: underline;
-      text-decoration-color: var(--terracotta);
-      text-underline-offset: 3px;
-    }
-
-    .hero .bio a:hover {
-      color: var(--terracotta);
-    }
-
-    .channels {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      font-family: var(--mono);
-      font-size: 0.82rem;
-    }
-
-    .channels a {
-      color: var(--ink-soft);
-      text-decoration: none;
-      border-bottom: 1px dotted var(--ink-mute);
-      padding-bottom: 2px;
-      transition: color 0.15s ease, border-color 0.15s ease;
-    }
-
-    .channels a:hover {
-      color: var(--terracotta);
-      border-bottom-color: var(--terracotta);
-      border-bottom-style: solid;
-    }
-
-    /* ============ Sections ============ */
-    .section {
-      padding: 2.75rem 0;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.6rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .section-title {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--ink);
-    }
-
-    .section-note {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      color: var(--ink-mute);
-    }
-
-    .section-note a {
-      color: var(--ink-mute);
-      text-decoration: none;
-    }
-
-    .section-note a:hover {
-      color: var(--terracotta);
-    }
-
-    /* ============ Packages ============ */
-    .packages {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-    }
-
-    .package {
-      display: block;
-      background: var(--card);
-      border: 1px solid var(--border-soft);
-      border-top: 3px solid var(--terracotta);
-      border-radius: 6px;
-      padding: 1.4rem 1.5rem 1.25rem;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .package:hover {
-      transform: translateY(-2px);
-      border-color: var(--border);
-      box-shadow: 0 6px 18px rgba(38, 32, 25, 0.08);
-    }
-
-    .package-name {
-      font-family: var(--mono);
-      font-size: 1.05rem;
-      font-weight: 600;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.75rem;
-      margin-bottom: 0.15rem;
-    }
-
-    .package-name .stars {
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--ink-mute);
-    }
-
-    .package-install {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--terracotta-deep);
-      margin-bottom: 0.75rem;
-    }
-
-    .package-desc {
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .package-links {
-      display: flex;
-      gap: 1rem;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-    }
-
-    .package-links span {
-      color: var(--ink-mute);
-      border-bottom: 1px dotted var(--ink-mute);
-      padding-bottom: 1px;
-    }
-
-    .package:hover .package-links span {
-      color: var(--terracotta);
-      border-bottom-color: var(--terracotta);
-    }
-
-    /* ============ Project index (dotted leaders) ============ */
-    .index-list {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .index-row {
-      display: flex;
-      align-items: baseline;
-      gap: 0.9rem;
-      padding: 0.8rem 0;
-      text-decoration: none;
-      color: inherit;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .index-row:last-child {
-      border-bottom: none;
-    }
-
-    .index-name {
-      font-family: var(--mono);
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--ink);
-      white-space: nowrap;
-      transition: color 0.15s ease;
-    }
-
-    .index-row:hover .index-name {
-      color: var(--terracotta);
-    }
-
-    .index-desc {
-      font-size: 0.88rem;
-      color: var(--ink-soft);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      flex-shrink: 1;
-    }
-
-    .index-leader {
-      flex: 1;
-      min-width: 2rem;
-      border-bottom: 1px dotted var(--ink-mute);
-      opacity: 0.6;
-      transform: translateY(-4px);
-    }
-
-    .index-meta {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--ink-mute);
-      white-space: nowrap;
-    }
-
-    /* ============ Kaggle leaderboard ============ */
-    .medals {
-      font-family: var(--mono);
-      font-size: 0.8rem;
-      color: var(--ink-soft);
-      margin-bottom: 1.5rem;
-    }
-
-    .board {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .board-row {
-      display: flex;
-      align-items: center;
-      gap: 1.4rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .board-row:last-child {
-      border-bottom: none;
-    }
-
-    .board-rank {
-      font-family: var(--mono);
-      font-size: 1.7rem;
-      font-weight: 600;
-      color: var(--terracotta);
-      min-width: 3.4rem;
-      line-height: 1.1;
-    }
-
-    .board-rank small {
-      display: block;
-      font-size: 0.65rem;
-      font-weight: 400;
-      color: var(--ink-mute);
-      letter-spacing: 0.03em;
-    }
-
-    .board-info h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.1rem;
-    }
-
-    .board-meta {
-      font-family: var(--mono);
-      font-size: 0.74rem;
-      color: var(--ink-mute);
-    }
-
-    .board-medal {
-      margin-left: auto;
-      font-size: 1.2rem;
-    }
-
-    /* ============ Writing ============ */
-    .article-row {
-      display: flex;
-      align-items: baseline;
-      gap: 1.25rem;
-      padding: 0.85rem 0;
-      text-decoration: none;
-      color: inherit;
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .article-row:last-child {
-      border-bottom: none;
-    }
-
-    .article-date {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      color: var(--ink-mute);
-      min-width: 5.2rem;
-      white-space: nowrap;
-    }
-
-    .article-title {
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.15s ease;
-    }
-
-    .article-row:hover .article-title {
-      color: var(--terracotta);
-    }
-
-    /* ============ Footer ============ */
-    .footer {
-      border-top: 1px solid var(--border);
-      margin-top: 2.5rem;
-      padding: 2.25rem 0 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 1rem;
-      flex-wrap: wrap;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      color: var(--ink-mute);
-    }
-
-    .footer a {
-      color: var(--ink-mute);
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      color: var(--terracotta);
-    }
-
-    .footer .cat {
-      letter-spacing: 0.05em;
-    }
-
-    /* ============ Responsive ============ */
-    @media (max-width: 640px) {
-      .hero {
-        padding: 3.5rem 0 3rem;
-      }
-
-      .packages {
-        grid-template-columns: 1fr;
-      }
-
-      .index-row {
-        flex-wrap: wrap;
-        gap: 0.25rem 0.9rem;
-      }
-
-      .index-desc {
-        flex-basis: 100%;
-        order: 3;
-        white-space: normal;
-      }
-
-      .index-leader {
-        display: none;
-      }
-
-      .index-meta {
-        margin-left: auto;
-      }
-
-      .board-row {
-        gap: 1rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        transition: none !important;
-      }
-
-      html {
-        scroll-behavior: auto;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <div class="container">
     <!-- Hero -->
     <header class="hero">
-      <h1 class="wordmark">brightertiger<span class="dot">.</span></h1>
+      <div class="header-row">
+        <h1 class="wordmark">brightertiger</h1>
+      <nav class="channels" aria-label="Profiles">
+        <a href="https://github.com/brightertiger" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.94.1-.73.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg>
+        </a>
+        <a href="https://www.kaggle.com/brightertiger" target="_blank" rel="noopener noreferrer" aria-label="Kaggle" title="Kaggle">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3v18m10-14-10 7m4-3 7 10"/></svg>
+        </a>
+        <a href="https://brightertiger.substack.com" target="_blank" rel="noopener noreferrer" aria-label="Substack" title="Substack">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4 3h16v2H4zm0 4h16v2H4zm0 4h16v11l-8-5-8 5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/brightertiger/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.31h.04c.39-.74 1.36-1.52 2.79-1.52 2.98 0 3.58 1.96 3.58 4.5v5.26Z"/></svg>
+        </a>
+        <a href="https://twitter.com/0xbrightertiger" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" title="Twitter / X">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 3 12 18h4L8 3H4Zm16 0-7 8M4 21l7-8"/></svg>
+        </a>
+      </nav>
+      </div>
       <p class="who">Ujjwal Singh Rao · data scientist · Kaggle Competitions Master</p>
       <p class="bio">
         I build ML systems for a living and open-source Python tools for fun — currently
@@ -687,15 +253,10 @@
         <a href="https://github.com/brightertiger/pygarble">pygarble</a>.
         This page tracks everything I ship: packages, projects, competitions, and writing.
       </p>
-      <nav class="channels" aria-label="Profiles">
-        <a href="https://github.com/brightertiger" target="_blank" rel="noopener noreferrer">github</a>
-        <a href="https://www.kaggle.com/brightertiger" target="_blank" rel="noopener noreferrer">kaggle</a>
-        <a href="https://brightertiger.substack.com" target="_blank" rel="noopener noreferrer">substack</a>
-        <a href="https://www.linkedin.com/in/brightertiger/" target="_blank" rel="noopener noreferrer">linkedin</a>
-        <a href="https://twitter.com/0xbrightertiger" target="_blank" rel="noopener noreferrer">twitter</a>
-      </nav>
+
     </header>
 
+    <main>
     <!-- Packages -->
     <section class="section">
       <div class="section-head">
@@ -704,23 +265,23 @@
       </div>
 
       <div class="packages">
-        <a href="https://github.com/brightertiger/abverdict" target="_blank" rel="noopener noreferrer" class="package">
-          <div class="package-name">abverdict <span class="stars">★ 14</span></div>
+        <article class="package">
+          <h3 class="package-name"><a href="https://github.com/brightertiger/abverdict" target="_blank" rel="noopener noreferrer">abverdict</a> <span class="stars">14 stars</span></h3>
           <div class="package-install">pip install abverdict</div>
           <p class="package-desc">A/B testing statistics for Python — sample size, significance, Bayesian &amp; sequential analysis, with a web calculator.</p>
           <div class="package-links">
-            <span>pypi</span><span>docs</span><span>live demo</span>
+            <a href="https://pypi.org/project/abverdict/" target="_blank" rel="noopener noreferrer">PyPI</a><a href="https://brightertiger.github.io/abverdict/" target="_blank" rel="noopener noreferrer">docs</a><a href="https://abverdict.vercel.app/" target="_blank" rel="noopener noreferrer">live demo</a>
           </div>
-        </a>
+        </article>
 
-        <a href="https://github.com/brightertiger/pygarble" target="_blank" rel="noopener noreferrer" class="package">
-          <div class="package-name">pygarble <span class="stars">★ 14</span></div>
+        <article class="package">
+          <h3 class="package-name"><a href="https://github.com/brightertiger/pygarble" target="_blank" rel="noopener noreferrer">pygarble</a> <span class="stars">14 stars</span></h3>
           <div class="package-install">pip install pygarble</div>
           <p class="package-desc">Detects garbled, gibberish text in English — 24 detection strategies, zero dependencies, 99.5% precision.</p>
           <div class="package-links">
-            <span>pypi</span><span>docs</span>
+            <a href="https://pypi.org/project/pygarble/" target="_blank" rel="noopener noreferrer">PyPI</a><a href="https://brightertiger.github.io/pygarble/" target="_blank" rel="noopener noreferrer">docs</a>
           </div>
-        </a>
+        </article>
       </div>
     </section>
 
@@ -735,31 +296,26 @@
         <a href="https://github.com/brightertiger/google-adk-demo" target="_blank" rel="noopener noreferrer" class="index-row">
           <span class="index-name">google-adk-demo</span>
           <span class="index-desc">LLM agents demo using Google ADK</span>
-          <span class="index-leader"></span>
-          <span class="index-meta">★ 16</span>
+          <span class="index-meta">16 stars</span>
         </a>
         <a href="https://github.com/brightertiger/kaggle" target="_blank" rel="noopener noreferrer" class="index-row">
           <span class="index-name">kaggle</span>
           <span class="index-desc">competition solutions &amp; playground</span>
-          <span class="index-leader"></span>
-          <span class="index-meta">★ 10</span>
+          <span class="index-meta">10 stars</span>
         </a>
         <a href="https://github.com/brightertiger/lane-detection" target="_blank" rel="noopener noreferrer" class="index-row">
           <span class="index-name">lane-detection</span>
           <span class="index-desc">lane segmentation with U-Net</span>
-          <span class="index-leader"></span>
-          <span class="index-meta">★ 2</span>
+          <span class="index-meta">2 stars</span>
         </a>
         <a href="https://github.com/brightertiger/entity-extraction" target="_blank" rel="noopener noreferrer" class="index-row">
           <span class="index-name">entity-extraction</span>
           <span class="index-desc">named entity recognition with BERT</span>
-          <span class="index-leader"></span>
           <span class="index-meta">↗</span>
         </a>
         <a href="https://brightertiger.github.io/notes/" target="_blank" rel="noopener noreferrer" class="index-row">
           <span class="index-name">notes</span>
           <span class="index-desc">notes on data science, ML &amp; neural networks</span>
-          <span class="index-leader"></span>
           <span class="index-meta">↗</span>
         </a>
       </div>
@@ -772,7 +328,7 @@
         <span class="section-note">Competitions Master</span>
       </div>
 
-      <p class="medals">🥇 ×3 &nbsp;·&nbsp; 🥈 ×12 &nbsp;·&nbsp; 🥉 ×4</p>
+      <p class="medals">3 gold &nbsp;·&nbsp; 12 silver &nbsp;·&nbsp; 4 bronze</p>
 
       <div class="board">
         <div class="board-row">
@@ -781,7 +337,6 @@
             <h3>Jigsaw Multilingual Toxic Comment Classification</h3>
             <div class="board-meta">NLP · gold</div>
           </div>
-          <div class="board-medal">🥇</div>
         </div>
 
         <div class="board-row">
@@ -790,7 +345,6 @@
             <h3>SIIM-ISIC Melanoma Detection</h3>
             <div class="board-meta">computer vision · gold</div>
           </div>
-          <div class="board-medal">🥇</div>
         </div>
 
         <div class="board-row">
@@ -799,7 +353,6 @@
             <h3>TalkingData AdTracking Fraud Detection</h3>
             <div class="board-meta">fraud detection · gold</div>
           </div>
-          <div class="board-medal">🥇</div>
         </div>
       </div>
     </section>
@@ -823,6 +376,8 @@
       </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
       <span>© 2026 Ujjwal Singh Rao</span>
@@ -832,7 +387,6 @@
         <a href="https://brightertiger.substack.com" target="_blank" rel="noopener noreferrer">substack</a> ·
         <a href="https://www.ujjwalsrao.xyz" target="_blank" rel="noopener noreferrer">resume</a>
       </span>
-      <span class="cat">&lt;^..^&gt;</span>
     </footer>
   </div>
 </body>
